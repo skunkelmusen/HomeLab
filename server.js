@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 app.get('/', (req, res) => {
-exec("ls -la", (error, stdout, stderr) => {
+exec("ls", (error, stdout, stderr) => {
     if (error) {
         //console.log(`error: ${error.message}`);
         return;
